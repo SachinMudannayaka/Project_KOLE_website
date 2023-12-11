@@ -1,0 +1,234 @@
+.custom-carousel{
+}
+.main-page-slider{
+
+}
+.outer {
+  height: 80vh;
+  width: 100vw;
+}
+@media only screen and (max-width: 1600px) {
+  .outer {
+    height: 70vh;
+  }
+}
+.banners-mid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 75vh; /* Adjust this value if needed */
+  width: 100vw;
+  gap: 25px;
+}
+
+.banners-mid p {
+  //text-align: center;
+  text-align: center;
+}
+
+.left-side{
+  padding-left: 0% ;
+
+}
+
+.head{
+  font-size: 18px;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  color:white;
+  animation: blink-head 3.2s infinite;
+}
+@keyframes blink-head {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.title-t{
+  padding-top:50px ;
+  transition: transform 0.8s;
+  font-size: 150px;
+  font-family: "Poppins", sans-serif;
+  color:white;
+  font-weight: 700;
+  animation: blink-title 3.6s infinite;
+}
+@keyframes blink-title {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.paragraph-div{
+  padding: 0% 10%;
+}
+.para {
+  padding-top:15px;
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  color: #777777;
+  font-weight: 300;
+  position: relative;
+  animation: blink-once 4.0s infinite;
+}
+
+@keyframes blink-once {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.button-mid{
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  color:white;
+  font-weight: bold;
+  position: relative;
+  animation: blink-title 4.4s infinite;
+  cursor: pointer;
+  background-color: black;
+  padding: 10%;
+  width: 200px;
+}
+@keyframes blink-title {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes examp {
+  0%   { left:0px; top:20px;}
+  25%  { left:0px; top:0px;}}
+
+.labels-carousel{
+  position: fixed;
+  top: 20%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 105px;
+  font-size: 11px;
+  font-weight: bold;
+  z-index: 2;
+
+
+
+}
+.labels-carousel > div{
+  text-align: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  gap: 15px;
+  width: 120px;
+
+
+}
+.label-related{
+  background-color: #ee2852;
+  color: white;
+
+}
+.label-buy-now{
+  background-color: white;
+}
+.icon-left{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border:none;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  right:0;
+  border-radius: 6px;
+  margin-right: 1.2%;
+  z-index: 2;
+
+}
+.icon-right {
+  z-index: 2;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  border: none;
+  position: absolute;
+  background-color: transparent;
+  top: 50%;
+  margin-left: 1%;
+  border-radius: 6px;
+
+}
+.mat-icon-size{
+  font-size: 50px;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+
+}
+@media (max-width: 940px){
+  .title-t{
+    font-size:100px;
+  }
+  .para {
+    font-size: 20px;
+  }
+}
+@media (max-width: 770px){
+  .labels-carousel{
+    display: none;
+  }
+}
+@media (max-width: 600px){
+  .icon-right{
+    display: none;
+  }
+  .icon-left{
+    display: none;
+  }
+  .banners-mid {
+    height: 50vh; /* Adjust this value if needed */
+    gap: 15px;
+  }
+  .outer {
+    height: 50vh;
+  }
+}
+@media (max-width: 425px) {
+  .head {
+    font-size: 13px;
+  }
+  .title-t {
+    font-size: 75px;
+  }
+  .para {
+    font-size: 12px;
+  }
+
+}

@@ -1,0 +1,803 @@
+<div>
+  <div class="upper-header">
+     <div class="left-upper-header">
+       <div class="address-contact-div"><mat-icon>location_on</mat-icon><p>WEST 21ST STREET, SOHO, NY </p></div>
+       <div class="address-contact-div"><mat-icon>tty</mat-icon><p>+ (123) 456-7890</p></div>
+     </div>
+    <div class="right-upper-header">
+      <div class="about-faq-shipping-div">
+                  <p>ABOUT</p>
+                  <p>FAQ</p>
+                  <p>SHIPPING</p>
+               </div>
+
+      <div class="right-upper-header-icon">
+               <mat-icon>facebook</mat-icon>
+               <mat-icon>facebook</mat-icon>
+               <mat-icon>facebook</mat-icon>
+               <mat-icon>facebook</mat-icon>
+              </div>
+
+            </div>
+                  </div>
+                <!--Bottom header-->
+  <div class="bottom-header">
+     <div class="left-bottom-header">
+     <div class="left-hamburger">
+         <div (click)="manageNavBar1()" class="">
+           <mat-icon class="">menu</mat-icon>
+         </div>
+           <!--   -->
+           <div *ngIf="navSliderState1" [@navSlider1]="true" class="">
+                 <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="left-nav-slider">
+                   <!-- This is the tree node template for leaf nodes -->
+                   <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding class="justify-between text-[14px] text-gray-500">
+                     <!-- use a disabled button to provide padding for tree leaf -->
+                     {{node.name}}
+                     <button mat-icon-button disabled></button>
+                   </mat-tree-node>
+                   <!-- This is the tree node template for expandable nodes -->
+
+                   <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding class="justify-between text-[14px] text-gray-500">
+                     {{node.name}}
+                     <button mat-icon-button matTreeNodeToggle
+                             [attr.aria-label]="'Toggle ' + node.name">
+                       <mat-icon class="mat-icon-rtl-mirror">
+                         {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                       </mat-icon>
+                     </button>
+
+                   </mat-tree-node>
+                 </mat-tree>
+           </div>
+     </div>
+           <!---->
+
+    </div>
+
+    <div class="logo-div"><p>KOLE`</p></div>
+
+    <div class="right-bottom-header">
+      <div>
+
+        <ul class="middle-nav">
+          <li class="dropdown">
+            <a>HOME</a>
+            <ul class="dropdown-content">
+              <!-- Dropdown content goes here -->
+              <div class="details-home flex gap-x-5 w-screen">
+
+                <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <tbody>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap dark:text-gray-100">
+                        Original Home
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap dark:text-gray-100 inline-flex">
+                        Catalogue Home
+                        <mat-icon>star</mat-icon>
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap dark:text-gray-100 inline-flex">
+                        Slider Showcase
+                        <mat-icon>star</mat-icon>
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap dark:text-gray-100">
+                        Shop Home
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap dark:text-gray-100 inline-flex">
+                        Carousel Home
+                        <mat-icon>star</mat-icon>
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap dark:text-gray-100 inline-flex">
+                        Interactive Catalogue
+                        <mat-icon>star</mat-icon>
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap dark:text-gray-100 inline-flex">
+                        Masonry Shop
+                        <mat-icon>star</mat-icon>
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap dark:text-gray-100">
+                        Parallax Showcase
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap dark:text-gray-100">
+                        Portfolio Masonry
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap dark:text-gray-100">
+                        Portfolio Pinterest
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap dark:text-gray-100">
+                        Modelling Agency
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap dark:text-gray-100">
+                        Blog with Sidebar
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap dark:text-gray-100 inline-flex">
+                        Blog Centered
+                        <mat-icon>star</mat-icon>
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap dark:text-gray-100 inline-flex">
+                        Left Menu
+                        <mat-icon>star</mat-icon>
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap dark:text-gray-100">
+                        Landing Page
+                      </th>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+              </div>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a>PAGES</a>
+            <ul class="dropdown-content">
+              <!-- Dropdown content goes here -->
+              <div class="details-pages flex gap-x-5 w-screen">
+
+                <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <tbody>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-1 font-medium whitespace-nowrap dark:text-gray-100">
+                        About Me
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-1 font-medium whitespace-nowrap dark:text-gray-100">
+                        About Us
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-1 font-medium whitespace-nowrap dark:text-gray-100">
+                        Clients & Brands
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-1 font-medium whitespace-nowrap dark:text-gray-100">
+                        Services
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-1 font-medium whitespace-nowrap dark:text-gray-100">
+                        Faq & Help
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-1 font-medium whitespace-nowrap dark:text-gray-100">
+                        Contact Us
+                      </th>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </ul>
+          </li>
+
+
+
+          <li class="dropdown">
+            <a>PORTFOLIO</a>
+            <ul class="dropdown-content">
+              <!-- Dropdown content goes here -->
+              <div class="details-portfolio flex gap-x-5 w-screen">
+
+                <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <thead class="text-xs text-gray-100 uppercase dark:text-gray-100">
+                    <tr>
+                      <th scope="col" class="px-6 py-2">
+                        STANDARD STYLE
+                      </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-1 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Two Column Grid
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-1 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Three Column Grid
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-1 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Four Column Grid
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-1 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Two Column Wide
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-1 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Five Column Wide
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-1 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Six Column Wide
+                      </th>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <thead class="text-xs text-gray-100 uppercase dark:text-gray-100">
+                    <tr>
+                      <th scope="col" class="px-6 py-2">
+                        GALLERY STYLE
+                      </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-1 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Three Columns Grid
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-1 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Four Columns Grid
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-1 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Four Columns Wide
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-1 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Five Columns Wide
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-1 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Six Columns Wide
+                      </th>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <thead class="text-xs text-gray-100 uppercase dark:text-gray-100">
+                    <tr>
+                      <th scope="col" class="px-6 py-2">
+                        MASONRY AND PINTEREST
+                      </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-1 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Masonry Grid
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-1 font-medium text-gray-300 whitespace-nowrap  dark:text-gray-300">
+                        Masonry Wide
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-1 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Pinterest Three Columns
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-1 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Pinterest Four Columns
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-1 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Pinterest Five Columns
+                      </th>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <thead class="text-xs text-gray-100 uppercase dark:text-gray-100">
+                    <tr>
+                      <th scope="col" class="px-6 py-2">
+                        PORTFOLIO SINGLE
+                      </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-1 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Portfolio Big Slider
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-1 font-medium text-gray-300 whitespace-nowrap  dark:text-gray-300">
+                        Portfolio Gallery
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-1 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Portfolio Small Slider
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-1 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Portfolio Big Images
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-1 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Portfolio Small Images
+                      </th>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </ul>
+          </li>
+
+
+
+          <li class="dropdown">
+            <a>BLOG</a>
+            <ul class="dropdown-content">
+              <!-- Dropdown content goes here -->
+              <div class="details-blog flex gap-x-5 w-screen">
+
+                <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <tbody>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap dark:text-gray-100 inline-flex">
+                        Blog Centered
+                        <mat-icon>star</mat-icon>
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap dark:text-gray-100 inline-flex">
+                        Centered with Slidebar
+                        <mat-icon>star</mat-icon>
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap dark:text-gray-100">
+                        Whole Post Layout
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap dark:text-gray-100">
+                        Standard with Sidebar
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap dark:text-gray-100">
+                        Blog Masonry
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap dark:text-gray-100">
+                        Masonry Wide
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap dark:text-gray-100">
+                        Single Post
+                      </th>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a>SHOP</a>
+            <ul class="dropdown-content">
+              <!-- Dropdown content goes here -->
+              <div class="details-shop">
+                <div class="">
+                  <table class="">
+                    <thead class="">
+                    <tr>
+                      <th scope="col" class="">
+                        STANDARD LAYOUTS
+                      </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="">
+                      <th scope="row" class="">
+                        Shop with Sidebar
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="">
+                        Shop Masonry
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="">
+                        Product Category
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="">
+                        Product Cart
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="">
+                        Single Product
+                      </th>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="">
+                  <table class="">
+                    <thead class="">
+                    <tr>
+                      <th scope="col" class="">
+                        MORE LAYOUTS
+                      </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="">
+                      <th scope="row" class="">
+                        Two Columns
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="">
+                        Three Columns
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="">
+                        Four Columns
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="">
+                        Five Columns
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="">
+                        Four Columns Wide
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="">
+                        Five Columns Wide
+                      </th>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="">
+                  <table class="">
+                    <thead class="">
+                    <tr>
+                      <th scope="col" class="">
+                        Recent Product
+                      </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="">
+                      <th scope="row" class="">
+                        <img class="h-[300px]" src="https://images.pexels.com/photos/1631181/pexels-photo-1631181.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="table-first-img">
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="">
+                        BLACK CROP TOP
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="">
+                        $75.00
+                      </th>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="">
+                  <table class="">
+                    <thead class="">
+                    <tr>
+                      <th scope="col" class="">
+                        POPULAR PRODUCT
+                      </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr >
+                      <th scope="row" class="">
+                        <img class="h-[300px]" src="https://images.pexels.com/photos/3756030/pexels-photo-3756030.jpeg?auto=compress&cs=tinysrgb&w=1600">
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="">
+                        BLACK CROP TOP
+                      </th>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="">
+                        $75.00
+                      </th>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+              </div>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a>PORTFOLIO</a>
+            <ul class="dropdown-content">
+              <div class="details-elements flex gap-x-5 w-screen">
+                <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <thead class="text-xs text-gray-100 uppercase dark:text-gray-100">
+                    <tr>
+                      <th scope="col" class="px-6 py-3">
+                        Product name
+                      </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Apple MacBook Pro 17"
+                      </th>
+                    </tr>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-300 whitespace-nowrap  dark:text-gray-300">
+                        Apple MacBook Pro 17"
+                      </th>
+                    </tr>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Apple MacBook Pro 17"
+                      </th>
+                    </tr>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Apple MacBook Pro 17"
+                      </th>
+                    </tr>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Apple MacBook Pro 17"
+                      </th>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <thead class="text-xs text-gray-100 uppercase dark:text-gray-100">
+                    <tr>
+                      <th scope="col" class="px-6 py-3">
+                        Product name
+                      </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Apple MacBook Pro 17"
+                      </th>
+                    </tr>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-300 whitespace-nowrap  dark:text-gray-300">
+                        Apple MacBook Pro 17"
+                      </th>
+                    </tr>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Apple MacBook Pro 17"
+                      </th>
+                    </tr>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Apple MacBook Pro 17"
+                      </th>
+                    </tr>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Apple MacBook Pro 17"
+                      </th>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <thead class="text-xs text-gray-100 uppercase dark:text-gray-100">
+                    <tr>
+                      <th scope="col" class="px-6 py-3">
+                        Product name
+                      </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Apple MacBook Pro 17"
+                      </th>
+                    </tr>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-300 whitespace-nowrap  dark:text-gray-300">
+                        Apple MacBook Pro 17"
+                      </th>
+                    </tr>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Apple MacBook Pro 17"
+                      </th>
+                    </tr>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Apple MacBook Pro 17"
+                      </th>
+                    </tr>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Apple MacBook Pro 17"
+                      </th>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <thead class="text-xs text-gray-100 uppercase dark:text-gray-100">
+                    <tr>
+                      <th scope="col" class="px-6 py-3">
+                        Product name
+                      </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Apple MacBook Pro 17"
+                      </th>
+                    </tr>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-300 whitespace-nowrap  dark:text-gray-300">
+                        Apple MacBook Pro 17"
+                      </th>
+                    </tr>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Apple MacBook Pro 17"
+                      </th>
+                    </tr>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Apple MacBook Pro 17"
+                      </th>
+                    </tr>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-300 whitespace-nowrap dark:text-gray-300">
+                        Apple MacBook Pro 17"
+                      </th>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+      <div class="right-icon-div">
+        <ul class="right-side-icons">
+          <li class="vertical-line"></li>
+          <li class=""><mat-icon>search</mat-icon></li>
+          <li class="inline-flex"><mat-icon class="cart-icon">shopping_cart</mat-icon><span class="cart-value">(0)</span></li>
+
+          <div *ngIf="navSliderState" [@navSlider]="true" class="right-nav-slider">
+            <div class="right-nav-slider-inner">
+              <div class="right-slider-header">
+                <p class="">KLOE`</p>
+                <button class="" (click)="manageNavBar()">
+                  <mat-icon class="back-arrow">menu_open</mat-icon>
+                </button>
+              </div>
+
+              <div class="right-slider-middle">
+                <p class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                  sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                  Ut wisi enim ad minim veniam, quis nostrud exerci tation.</p>
+                <img class="" src="https://kloe.qodeinteractive.com/wp-content/uploads/2015/12/side-area-banner.jpg" alt="">
+
+              <div class="right-slider-tabs">
+                <ul class="">
+                  <li>ABOUT</li>
+                  <li>FAQ</li>
+                  <li>CONTACT</li>
+                  <li>SHOP</li>
+                </ul>
+              </div>
+
+                <div class="right-slider-icons">
+                  <ul class="">
+                    <li><mat-icon>facebook</mat-icon></li>
+                    <li><mat-icon>facebook</mat-icon></li>
+                    <li><mat-icon>facebook</mat-icon></li>
+                    <li><mat-icon>facebook</mat-icon></li>
+                    <li><mat-icon>facebook</mat-icon></li>
+                    <li><mat-icon>facebook</mat-icon></li>
+                  </ul>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <li><div (click)="manageNavBar()" class="">
+            <mat-icon class="" fontSet="">menu</mat-icon>
+          </div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

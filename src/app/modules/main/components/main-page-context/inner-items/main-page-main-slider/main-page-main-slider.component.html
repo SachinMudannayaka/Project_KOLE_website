@@ -1,0 +1,43 @@
+<!--<p>main-page-slider-context works!</p>-->
+<div class="main-page-slider">
+  <div class="labels-carousel">
+
+    <div class="label-related">
+      <mat-icon class="donut_small">donut_small</mat-icon>
+      RELATED
+    </div>
+
+    <div class="label-buy-now">
+      <mat-icon class="cart-icon">shopping_cart</mat-icon>
+      BUY NOW
+    </div>
+  </div>
+  <owl-carousel-o [options]="customOptions" class="custom-carousel "  #owlsaider >
+    <ng-container *ngFor="let slide of slidesStore">
+      <ng-template carouselSlide>
+        <div [ngStyle]="{'background':'url('+slide.image+')','background-size':'cover'}" class="outer">
+
+
+          <div class="icon-right w-[46px] h-[80px]">
+            <mat-icon class="mat-icon-size" [ngStyle]="{'color':'black'}" (click)="owlsaider.prev()">keyboard_arrow_left</mat-icon>
+          </div>
+
+          <div class="icon-left w-[46px] h-[80px] ">
+            <mat-icon class="mat-icon-size" [ngStyle]="{'color':'black'}"  (click)="owlsaider.next()" >keyboard_arrow_right</mat-icon>
+          </div>
+
+          <div class="banners-mid">
+            <p class="head">{{slide?.head}}</p>
+            <p class="title-t">{{slide?.title}}</p>
+            <div class="paragraph-div"><p class="para">{{slide?.para}}</p></div>
+            <button><p class="button-mid" >{{slide?.button}}</p></button>
+
+          </div>
+
+        </div>
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+
+
+</div>

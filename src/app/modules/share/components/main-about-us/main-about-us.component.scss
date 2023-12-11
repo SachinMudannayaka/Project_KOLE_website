@@ -1,0 +1,70 @@
+.about-us-background{
+  width: 100%;
+  background-color: #f0eeee;
+}
+.about-us-body{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0px 150px 0px 150px;
+}
+.container-about{
+  //padding: 100px;
+
+}
+.intro-tag{
+  padding-top: 75px;
+font-style: italic;
+}
+.main-header-about-us{
+font-size: 25px;
+  font-weight: bold;
+}
+.paragraph-about-us{
+ font-size: 15px;
+  color:gray;
+  padding:20px 0px 20px 0px;
+  text-align: start;
+
+}
+.button-about-us{
+background-color: black;
+  color: white;
+  padding: 15px;
+  width: 250px;
+  margin-bottom: 75px;
+}
+.image-about-us{
+  background-image: url("https://kloe.qodeinteractive.com/wp-content/uploads/2015/12/home-main-image-3.jpg");
+  background-repeat: no-repeat;
+  background-size: contain; /* Adjust the background size as needed */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #f0eeee;
+
+}
+@media (max-width: 1200px){
+  .about-us-body{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .image-about-us{
+    height:65vh;
+  }
+}
+@media (max-width: 770px){
+  .about-us-body{
+    padding: 0px 50px 0px 50px;
+  }
+  .image-about-us{
+    height:50vh;
+  }
+}
+@media (max-width: 600px){
+  .image-about-us{
+    height:25vh;
+  }
+  .about-us-body{
+    padding: 0px 50px 0px 50px;
+  }
+}

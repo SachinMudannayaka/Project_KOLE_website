@@ -1,0 +1,50 @@
+.skills-page-div{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color:#f0eeee;
+  padding: 0px 150px;
+}
+.image-area{
+  background-image: url("https://kloe.qodeinteractive.com/wp-content/uploads/2015/12/home-main-image-2.jpg");
+  overflow: hidden;
+  height: 50vh;
+  background-repeat: no-repeat;
+}
+.text-area{
+ padding-top: 50px;
+  padding-left: 10px;
+}
+.topic-of-div{
+  font-size: 16px;
+  font-style: italic;
+  font-weight: bold;
+}
+.intro-of-div{
+  font-size: 25px;
+  font-weight: bold;
+}
+.description-of-div{
+  font-size: 14px;
+  color: gray;
+}
+.progress-bar-area{
+  width: 100%;
+}
+.sub-progress-bar{
+  margin-bottom: 20px;
+}
+.topic-of-bars{
+  font-size: 13px;
+  font-weight: bold;
+}
+@media only screen and (max-width: 1200px) {
+  .skills-page-div {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media only screen and (max-width: 770px){
+  .skills-page-div{
+    padding: 0px 50px;
+  }
+}

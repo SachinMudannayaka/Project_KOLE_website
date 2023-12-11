@@ -1,0 +1,31 @@
+.services-div{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px; /* Adjust the gap size as needed */
+  justify-content: center;
+  align-items: center;
+  padding: 50px 150px 50px 150px;
+}
+.head-topic{
+  font-style: italic;
+}
+.mid-topic{
+  font-size: 16px;
+  font-weight: bold;
+}
+.description-services{
+  font-size: 15px;
+  color: gray;
+  padding-top: 10px;
+}
+@media (max-width: 990px){
+  .services-div{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 770px){
+  .services-div{
+    padding: 50px 50px 50px 50px;
+  }
+}

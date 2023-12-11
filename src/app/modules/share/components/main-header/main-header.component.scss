@@ -1,0 +1,380 @@
+//upper-header css
+.upper-header{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 400px;
+  background-color: black;
+  color: white;
+  font-size:13px;
+}
+.left-upper-header{
+  display: flex;
+  gap: 20px;
+}
+
+
+@media only screen and (max-width: 1540px) {
+  .upper-header {
+    padding: 20px 150px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .upper-header {
+    padding: 5px 75px;
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .upper-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    font-size: 10px;
+  }
+}
+
+.address-contact-div{
+  display: flex;
+}
+.right-upper-header{
+  display: flex;
+  gap: 25px;
+}
+.about-faq-shipping-div{
+  display: flex;
+  gap: 20px;
+}
+.right-upper-header-icon{
+  display: flex;
+}
+mat-icon{
+  font-size: 16px;
+}
+//bottom-header css
+.bottom-header{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 400px;
+}
+.left-bottom-header{
+  display: flex;
+  justify-content: space-between;
+  gap:300px
+}
+.left-nav-slider {
+  width:100%;
+  padding: 0px 150px;
+  height: auto;
+  position: absolute;
+  right: 0;
+  z-index: 600;
+}
+@media only screen and (max-width: 1024px) {
+  .bottom-header {
+    padding: 20px 100px;
+  }
+}
+@media only screen and (max-width: 1540px) {
+  .bottom-header {
+    padding: 20px 150px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .left-bottom-header {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1024px){
+  .left-nav-slider {
+    width:100%;
+    padding: 0px 100px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    z-index: 600;
+  }
+   .bottom-header{
+     padding: 20px 75px;
+   }
+}
+@media only screen and (max-width: 770px) {
+  .bottom-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+  }
+  .left-nav-slider {
+    width:100%;
+    padding: 0px 10px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    z-index: 600;
+  }
+}
+.logo-div{
+  font-size: 35px;
+  font-weight: bold;
+}
+.mat-tree-node {
+  border-bottom: 1px solid #F5F5F5; /* Adjust the color and style as per your design */
+  padding-bottom: 4px; /* Adjust the spacing as per your design */
+}
+
+.right-bottom-header{
+display: flex;
+  gap: 30px;
+
+}
+
+.middle-nav{
+
+  display: flex;
+  justify-content:center;
+  min-width: 300px;
+  width: 100%;
+  gap: 30px;
+  font-size:5px;
+}
+.vertical-line {
+  border-left: 1px solid white;
+  height: auto; /* Adjust the height as needed */
+  margin: 0 auto;
+}
+.cart-value{
+  justify-items: start;
+}
+.cart-icon{
+  right: 0;
+}
+@media only screen and (max-width: 1024px) {
+  .cart-icon, .cart-value, .middle-nav {
+    display: none;
+  }
+
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  padding-top: 100%;
+  z-index: 2;
+  animation-name: slideUp;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  background-color: black;
+}
+@keyframes slideUp {
+  0%{
+    transform: translateY(50%);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+.dropdown-content li {
+  margin-bottom: 0px;
+  width: auto;
+  z-index: 2;
+}
+
+.dropdown-content a {
+  display: block;
+  color:white;
+  text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+ul a {
+  font-size: 13px;
+  cursor: pointer;
+
+}
+ul a:hover {
+
+  border-bottom: 3px solid #c54343;
+  color: #E5BCEE;
+
+}
+
+.details-home{
+  width: fit-content;
+  top: 15%;
+  transform: translateX(-50%);
+  position: absolute;
+  background-color: #000000;
+  color: rgba(255, 255, 255, 0.479);
+
+  h3 {
+    color: white;
+  }
+
+  .table-data {
+
+  }
+}
+.details-pages{
+  width: fit-content;
+  top: 15%;
+  transform: translateX(-50%);
+  position: absolute;
+  background-color: #000000;
+  color: rgba(255, 255, 255, 0.479);
+
+  h3 {
+    color: white;
+  }
+
+  .table-data {
+
+  }
+}
+.details-blog{
+  width: fit-content;
+  top: 15%;
+  transform: translateX(-50%);
+  position: absolute;
+  background-color: #000000;
+  color: rgba(255, 255, 255, 0.479);
+
+  h3 {
+    color: white;
+  }
+
+  .table-data {
+
+  }
+}
+
+.details-shop{
+  width: 100%;
+
+
+
+
+  h3 {
+    color: white;
+  }
+
+  .table-data {
+
+  }
+}
+.right-side-icons{
+  display: flex;
+}
+.right-nav-slider {
+  width:30%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 600;
+  display: flex;
+  background-color: black;
+  color: white;
+}
+@media only screen and (max-width: 900px) {
+  .right-nav-slider{
+    width:60%;
+  }
+
+}
+@media only screen and (max-width: 600px) {
+  .right-nav-slider{
+    width:100%;
+  }
+
+}
+.right-nav-slider-inner {
+  width: 100%;
+}
+
+//.right-nav-slider-inner::-webkit-scrollbar {
+//  width: 8px;
+//}
+
+//.right-nav-slider-inner::-webkit-scrollbar-thumb {
+//  border-radius: 50px;
+//  background-color: #141b25;
+//}
+
+//.right-nav-slider-inner::-webkit-scrollbar-track {
+//  border-radius: 50px;
+//  background-color: white;
+//}
+
+.right-slider-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px;
+}
+.right-slider-header mat-icon{
+  height: 30px;
+  width: 30px;
+  font-size: 30px;
+}
+.right-slider-header p {
+  margin: 0 auto;
+  justify-self: center;
+  font-size: 35px;
+  font-weight: bold;
+}
+.right-slider-header button {
+  margin-left: 0px; /* push the button to the right */
+  font-size: 50px;
+}
+.right-slider-middle{
+  padding: 10px 20px;
+}
+.right-slider-middle p{
+  text-align: justify;
+  //text-justify: distribute-all-lines;
+}
+.right-slider-middle img{
+  width: 100%;
+}
+.right-slider-middle ul{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.right-slider-tabs{
+  padding:30px 20px;
+ font-weight: bold;
+}
+//.right-slider-tabs ul {
+//  padding-top: 30px;
+//  display: flex;
+//  justify-content: center; /* Centers the list items horizontally */
+//  gap: 20px; /* Sets the gap between list items */
+//  padding-inline-start: 0; /* Removes default padding */
+//}
+//.right-slider-tabs li {
+//  list-style: none; /* Removes the default list item markers */
+//  font-weight: bold;
+//}
+//.right-slider-icons ul{
+//  padding-top: 30px;
+//  display: flex;
+//  justify-content: center; /* Centers the list items horizontally */
+//  gap: 5px; /* Sets the gap between list items */
+//  padding-inline-start: 0; /* Removes default padding */
+//}
+.right-slider-icons ul{
+  padding:30px 30px;
+  font-weight: bold;
+}
+.right-slider-icons mat-icon{
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+}
